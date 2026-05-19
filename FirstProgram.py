@@ -1,8 +1,6 @@
-name = input("Name: ")
-age = input("Age: ")
-cgpa = input("CGPA: ")
+age = (input("Age: "))
 
-print("Name: ", name)
-print("Age:", age)
-print("CGPA:", cgpa)
-
+if(age == "ten"):
+    print("Adult")
+else:
+    print("Oldie")
