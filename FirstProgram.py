@@ -1,6 +1,5 @@
-age = (input("Age: "))
+num1 = float(input("Enter 1st number: "))
+num2 = float(input("Enter 2nd number: "))
 
-if(age == "ten"):
-    print("Adult")
-else:
-    print("Oldie")
+
+print(num1 >= num2)
