@@ -1,10 +1,14 @@
-info = {
-    "name" : "Ajwad Abrar",
-    "marks" :{
-        "mat" : 20,
-        "phy" : 10,
-        "che" : 30,
-    }
-}
+set = set()
 
-print(info.get("name"))
+set.add(1)
+set.add("Abrar")
+set.add((2, 2.34, "Hello"))
+print(set)   
+
+set.remove(1)
+
+print(set)
+
+set.clear()
+
+print(set)
