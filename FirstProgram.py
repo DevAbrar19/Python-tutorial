@@ -1,14 +1,7 @@
-set = set()
+n = int(input("Enter n: "))
 
-set.add(1)
-set.add("Abrar")
-set.add((2, 2.34, "Hello"))
-print(set)   
+i = 1
 
-set.remove(1)
-
-print(set)
-
-set.clear()
-
-print(set)
+while i <= 10:
+    print(n,"X",i,"=", n * i)
+    i+= 1
