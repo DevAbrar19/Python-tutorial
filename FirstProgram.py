@@ -1,7 +1,4 @@
-n = int(input("Enter n: "))
+def avg(a=1, b=2, c=3):
+    return (a + b + c) / 3
 
-i = 1
-
-while i <= 10:
-    print(n,"X",i,"=", n * i)
-    i+= 1
+print(avg(1, 2, 5))
