@@ -1,4 +1,7 @@
-def avg(a=1, b=2, c=3):
-    return (a + b + c) / 3
+def show(n):
+    if(n == 0):
+        return
+    print(n)
+    show(n - 1)
 
-print(avg(1, 2, 5))
+show(5)
