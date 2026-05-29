@@ -1,25 +1,27 @@
-class Account:
+class Car:
+    color = "Black"
 
-    def __init__(self, balance, accNo):
-        self.balance = balance
-        self.accNo = accNo
+    def __init__(self, color):
+        self.color = color
 
-    def credit(self, amount):
-        self.balance += amount
+    def start(self):
+        print("Starting")
+    
+    def stop(self):
+        print("Stopping")
 
-    def debit(self, amount):
-        self.balance -= amount
 
-    def showBalance(self):
-        print(self.balance)
+class Tarzan(Car):
+    nickName = "Tarzaan"
 
-acc = Account(1000, 12)
-acc.showBalance()
+    def __init__(self, color):
+        super().__init__(color)
 
-acc.credit(100)
+    def showColor(self):
+        print(self.color)
+    
 
-acc.showBalance()
 
-acc.debit(100)
+merc = Tarzan("Red")
 
-acc.showBalance()
+merc.showColor()
