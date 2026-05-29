@@ -1,24 +1,21 @@
-class Complex:
-    def __init__(self, real, img):
-        self.real = real
-        self.img = img
-
-    def showNumber(self):
-        print(self.real , "i + " , self.img , "j", sep = "")
-
-    def __add__(self, object):
-        return Complex(self.real + object.real, self.img + object.img)
+class Employee:
+    def __init__(self, role, dept, sal):
+        self.role = role
+        self.dept = dept
+        self.sal = sal
     
-    def __sub__(self, object):
-        return Complex(self.real - object.real, self.img - object.img)
+    def showDetails(self):
+        print(self.role)
+        print(self.dept)
+        print(self.sal)
 
-num1 = Complex(1, 5)
-num2 = Complex(3, 7)
+class Engineer(Employee):
+    def __init__(self, role, dept, sal, name, age):
+        super().__init__(role, dept, sal)
+        self.name = name
+        self.age = age
 
-num3 = num1 + num2
-
-num3.showNumber()
-
-num3 = num1 - num2
-
-num3.showNumber()
+e = Engineer("IT", "CSE", 5000, "Ajwad", 20)
+e.showDetails()
+print(e.name)
+print(e.age)
