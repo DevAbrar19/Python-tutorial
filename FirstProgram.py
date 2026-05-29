@@ -1,30 +1,25 @@
-class Student:
+class Account:
 
+    def __init__(self, balance, accNo):
+        self.balance = balance
+        self.accNo = accNo
 
-    def __init__(self, name, marks1, marks2, marks3):
-        self.name = name
-        self.marks1 = marks1
-        self.marks2 = marks2
-        self.marks3 = marks3
+    def credit(self, amount):
+        self.balance += amount
 
-    @staticmethod
-    def average():
-        print("working")
+    def debit(self, amount):
+        self.balance -= amount
 
-    # def hello(self):
-    #     print("Welcome", self.name)
+    def showBalance(self):
+        print(self.balance)
 
-    # def getMarks(self):
-    #     return self.marks
-    
-    # def setMarks(self, marks):
-    #     self.marks = marks
-    
+acc = Account(1000, 12)
+acc.showBalance()
 
-s1 = Student("Ajwad Abrar", 20, 10 ,20)
-Student.average()
-# print(s1.name, s1.marks)
-# s1.hello()
-# print(s1.getMarks())
-# s1.setMarks(10)
-# print(s1.getMarks())
+acc.credit(100)
+
+acc.showBalance()
+
+acc.debit(100)
+
+acc.showBalance()
