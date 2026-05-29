@@ -1,27 +1,24 @@
-class Car:
-    color = "Black"
+class Complex:
+    def __init__(self, real, img):
+        self.real = real
+        self.img = img
 
-    def __init__(self, color):
-        self.color = color
+    def showNumber(self):
+        print(self.real , "i + " , self.img , "j", sep = "")
 
-    def start(self):
-        print("Starting")
+    def __add__(self, object):
+        return Complex(self.real + object.real, self.img + object.img)
     
-    def stop(self):
-        print("Stopping")
+    def __sub__(self, object):
+        return Complex(self.real - object.real, self.img - object.img)
 
+num1 = Complex(1, 5)
+num2 = Complex(3, 7)
 
-class Tarzan(Car):
-    nickName = "Tarzaan"
+num3 = num1 + num2
 
-    def __init__(self, color):
-        super().__init__(color)
+num3.showNumber()
 
-    def showColor(self):
-        print(self.color)
-    
+num3 = num1 - num2
 
-
-merc = Tarzan("Red")
-
-merc.showColor()
+num3.showNumber()
