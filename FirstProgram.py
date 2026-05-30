@@ -1,21 +1,16 @@
-class Employee:
-    def __init__(self, role, dept, sal):
-        self.role = role
-        self.dept = dept
-        self.sal = sal
-    
-    def showDetails(self):
-        print(self.role)
-        print(self.dept)
-        print(self.sal)
+import random
 
-class Engineer(Employee):
-    def __init__(self, role, dept, sal, name, age):
-        super().__init__(role, dept, sal)
-        self.name = name
-        self.age = age
+randNum = random.randint(1, 100)
 
-e = Engineer("IT", "CSE", 5000, "Ajwad", 20)
-e.showDetails()
-print(e.name)
-print(e.age)
+while True:
+    num = int(input("Enter a number: "))
+
+    if(num == randNum):
+        print("Congratulations! You guessed the correct number.")
+        break
+    elif(num > randNum):
+        print("You have guessed a larger number. ")
+    else:
+        print("You have guessed a smaller number.")
+
+print("Game Over.")
